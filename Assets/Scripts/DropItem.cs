@@ -7,7 +7,7 @@ public class DropItem : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        resourceManager = resourceManager = FindFirstObjectByType<ResourceManager>();
+        resourceManager = FindFirstObjectByType<ResourceManager>();
     }
     public void Interact(HeldItem heldItem, PlayerInteraction player)
     {
@@ -17,13 +17,11 @@ public class DropItem : MonoBehaviour, IInteractable
             return;
         }
 
-        Collect(player);
+            Collect();
     }
 
-    private void Collect(PlayerInteraction player)
+    private void Collect()
     {
-      
-
         if (CompareTag("WoodDrop"))
         {
            resourceManager.AddWood();

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Rock : Breakable
 {
+    protected override int hitsToBreak => 4;   //we override hitsToBreak it in Rock script.
     protected override void Break()
     {
         Debug.Log("Rock is breaking");

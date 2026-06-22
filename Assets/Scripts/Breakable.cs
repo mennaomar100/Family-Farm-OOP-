@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Breakable : MonoBehaviour, IInteractable
 {
-    [SerializeField] protected int hitsToBreak = 3;
+    protected virtual int hitsToBreak => 3;  //we make it a property.
     protected int currentHits;
 
     [SerializeField] protected GameObject dropPrefab;
